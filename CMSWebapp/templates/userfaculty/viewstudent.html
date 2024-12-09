@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FACULTY HOME</title>
+    <!doctype html>
+    <html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Yale college</title>
+        <!-- google-fonts -->
+        <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- //google-fonts -->
+        <!-- Template CSS Style link -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+    </head>
+
+<body>
+
+    <!-- //top header -->
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="{% static 'images/logo.png' %}" alt="" class="mr-1" />YALE COLLEGE</a>
+                </h1>
+
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="facultyhome">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="about" class="dropdown-toggle"
+                                data-bs-toggle="dropdown">STUDENT</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="addstudent">ADD STUDENT</a></li>
+                                <li><a class="dropdown-item" href="takeattendance">TAKE ATTANDENCE</a></li>
+                                <li><a class="dropdown-item" href="viewstudent">VIEW STUDENT</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="courses" class="dropdown-toggle"
+                                data-bs-toggle="dropdown">MATERIALS</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="addmaterial">ADD MATERIALS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="contact" class="dropdown-toggle"
+                                data-bs-toggle="dropdown">EXAMINATION</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="addresult">ADD RESULT</a></li>
+                                <li><a class="dropdown-item" href="viewresult1">VIEW RESULT</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="" class="dropdown-toggle"
+                            data-bs-toggle="dropdown">EVENTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="addevents">ADD EVENTS</a></li>
+                            <li><a class="dropdown-item" href="viewevents">VIEW EVENTS</a></li>
+                        </ul>
+                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                {{request.session.facultyfname}}
+                                {{request.session.facultylname}}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">{{request.session.facultyemail}}</a></li>
+                                <li><a class="dropdown-item" href="facultyprofile">Profile</a></li>
+                                <li><a class="dropdown-item" href="facultylogout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+    <div class="container">
+        <div class="card shadow mb-4 mt-5">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">STUDENT LIST</h6>
+            </div>
+            <div class="card-body">
+                <div class="row mt-3 my-3">
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="txtsearch" id="myInput" placeholder="Search">
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="d-grid">
+                            <input type="button" class="btn btn-danger btn-block" value="EXPORT REPORT" onclick="tableToCSV()">
+                        </div>    
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Enrollment No</th>
+                                <th>Name</th>
+                                <th>Emailid</th>
+                                <th>Contact No</th>
+                                <th>Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            {% for student in allstudent %}
+                            <tr>
+                                <td>{{student.stdenno}}</td>
+                                <td>{{student.stdfname}}{{student.stdmname}}{{student.stdlname}}</td>
+                                <td>{{student.stdemailid}}</td>
+                                <td>{{student.stdscontactno}}</td>
+                                <td>
+                                    <img src="{% static 'images/' %}{{student.stdphoto}}" height="50" width="75">
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                 <script>
+                     $(document).ready(function(){
+                                  $("#myInput").on("keyup", function() {
+                                    var value = $(this).val().toLowerCase();
+                                    $("#myTable tr").filter(function() {
+                                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                  });
+                                });
+
+
+
+                                function tableToCSV() {
+                                
+                                // Variable to store the final csv data
+                                let csv_data = [];
+
+                                // Get each row data
+                                let rows = document.getElementsByTagName('tr');
+                                for (let i = 0; i < rows.length; i++) {
+
+                                    // Get each column data
+                                    let cols = rows[i].querySelectorAll('td,th');
+
+                                    // Stores each csv row data
+                                    let csvrow = [];
+                                    for (let j = 0; j < cols.length-1; j++) {
+
+                                        // Get the text data of each cell
+                                        // of a row and push it to csvrow
+                                        csvrow.push(cols[j].innerHTML);
+                                    }
+
+                                    // Combine each column value with comma
+                                    csv_data.push(csvrow.join(","));
+                                }
+
+                                // Combine each row data with new line character
+                                csv_data = csv_data.join('\n');
+
+                                // Call this function to download csv file  
+                                downloadCSVFile(csv_data);
+
+                                }
+
+                                function downloadCSVFile(csv_data) {
+
+                                // Create CSV file object and feed
+                                // our csv_data into it
+                                CSVFile = new Blob([csv_data], {
+                                    type: "text/csv"
+                                });
+
+                                // Create to temporary link to initiate
+                                // download process
+                                let temp_link = document.createElement('a');
+
+                                // Download csv file
+                                temp_link.download = "Report.csv";
+                                let url = window.URL.createObjectURL(CSVFile);
+                                temp_link.href = url;
+
+                                // This link should not be displayed
+                                temp_link.style.display = "none";
+                                document.body.appendChild(temp_link);
+
+                                // Automatically click the link to
+                                // trigger download
+                                temp_link.click();
+                                document.body.removeChild(temp_link);
+                                }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="w3l-footer-22 position-relative mt-5 pt-5">
+        <div class="footer-sub">
+            <div class="container">
+                <div class="text-txt">
+                    <div class="row sub-columns">
+                        <div class="col-lg-2 col-sm-6 sub-two-right">
+                            <h6>Quick links</h6>
+                            <ul>
+                                <li><a href="facultyhome"><span class="fa fa-angle-double-right mr-2"></span>Home</a>
+                                </li>
+                                <li><a href="viewstudent"><span class="fa fa-angle-double-right mr-2"></span>Student</a>
+                                </li>
+                                <li><a href="addmaterial"><span class="fa fa-angle-double-right mr-2"></span>Material</a></li>
+                                <li><a href="viewresult1"><span class="fa fa-angle-double-right mr-2"></span>Examination</a>
+                                </li>
+                                <li><a href="viewevents"><span class="fa fa-angle-double-right mr-2"></span>Events</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 sub-one-left mt-lg-0 mt-sm-5 mt-4">
+                            <h6>Contact </h6>
+                            <div class="column2">
+                                <div class="href1"><span class="fa fa-envelope-o" aria-hidden="true"></span><a
+                                        href="mailto:info@example.com">yale@gmail.com</a>
+                                </div>
+                                <div class="href2"><span class="fa fa-phone" aria-hidden="true"></span><a
+                                        href="">+91-8986532140</a>
+                                </div>
+                                <div>
+                                    <p class="contact-para"><span class="fa fa-map-marker"
+                                            aria-hidden="true"></span>Ahmedabad,B2 subhas colony,380060</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 sub-one-left ab-right-cont pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+                            <h6>About </h6>
+                            <p>Yale college provides the course of bachlor's in computer applications. We are providing this course for students who wants to 
+                                build their career in IT field.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright-footer text-center">
+            <div class="container">
+                <div class="columns">
+                    <p>@2024 Yale All rights reserved. Design by <a href="#" target="_blank">Vishva, Nyasa, Neha
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- //copyright -->
+    </footer>
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-level-up" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- banner slider -->
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-one').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    480: {
+                        items: 1,
+                        nav: false
+                    },
+                    667: {
+                        items: 1,
+                        nav: false
+                    },
+                    1000: {
+                        items: 1,
+                        nav: false
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //banner slider -->
+
+    <!-- counter for stats -->
+    <script src="{% static 'js/counter.js' %}"></script>
+    <!-- //counter for stats -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="{% static 'js/theme-change.js' %}"></script>
+    <script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+            thhis = thhis.find(".text-js");
+            var text = thhis.text().trim().split('');
+            var amntOfChars = text.length;
+            var newString = "";
+            thhis.text("|");
+            setTimeout(function () {
+                thhis.css("opacity", 1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for (var i = 0; i < amntOfChars; i++) {
+                    (function (i, char) {
+                        setTimeout(function () {
+                            newString += char;
+                            thhis.text(newString);
+                        }, i * typingSpeed);
+                    })(i + 1, text[i]);
+                }
+            }, 1500);
+        }
+
+        $(document).ready(function () {
+            // Now to start autoTyping just call the autoType function with the 
+            // class of outer div
+            // The second paramter is the speed between each letter is typed.   
+            autoType(".type-js", 200);
+        });
+    </script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>

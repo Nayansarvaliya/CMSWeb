@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Yale college</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+</head>
+
+<body>
+    <!-- top header -->
+    <section class="w3l-top-header">
+        <div class="container-fluid">
+            <div class="top-content-w3ls d-flex align-items-center justify-content-between">
+                <div class="top-headers">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone"></i><a href="tel:+1(21) 234 4567">+91-8986532140</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i><a href="mailto:mail@example.com">yale@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-headers top-headers-2">
+                    <ul>
+                        <li>
+                            <a href="userlogin">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //top header -->
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="{% static 'images/logo.png' %}" alt="" class="mr-1" />YALE COLLEGE</a>
+                </h1>
+
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="courses">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+   
+
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <div class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold text-white mb-sm-3 mb-2">Courses</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="index">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Courses
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+    <!-- courses section -->
+    <div class="w3l-grids-block-5 w3l-grids-block-6 py-5">
+        <div class="container py-md-5 py-4">
+            <div class="title-heading-w3 text-center mx-auto mb-5 pb-sm-4">
+                <h3 class="title-main">Our <span>Course</span></h3>
+            </div>
+            <div class="container">
+                <div class="title-heading-w3 text-center mx-auto mb-5 pb-sm-4 ">
+                    <h3 class="text-center"> BCA (BACHLOR IN COMPUTER APPLICATIONS)</h3>
+                    <p class="mt-4">We are providing the course in Computer field. Those who have dream to be in IT field then this course is helpful.</p>
+                </div>
+            </div>
+        </div>
+    </div>                                      
+    <!-- //courses section -->
+    <section>
+        <div class="container">
+            <div class="container mt-2">
+                <h2>Semester Wise Material</h2>
+                <br>
+                <!-- Nav pills -->
+                <ul class="nav nav-pills" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#sem1">Semester 1</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#sem2">Semester 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#sem3">Semester 3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#sem4">Semester 4</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#sem5">Semester 5</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#sem6">Semester 6</a>
+                  </li>
+                </ul>
+              
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div id="sem1" class="container tab-pane active"><br>
+                    <h3>Semester 1</h3>
+                    <div class="row">
+                            <div class="col-sm-3 p-3 text-center">
+                                <a href="{% static 'files/English sparkles pdf.pdf' %}" target="_blank">
+                                    <i class="fa fa-book course-icon" style="font-size:30px;" aria-hidden="true"></i>
+                                    <span class="course-content-desc">English </span>
+                                    
+                                </a> 
+                            </div>
+                            <div class="col-sm-3 p-3 text-center">
+                                <a href="files/Impress.pdf" target="_blank">
+                                    <i class="fa fa-book course-icon"style="font-size:30px;" aria-hidden="true"></i>
+                                    <span class="course-content-desc">Impress</span>
+                                    
+                                </a>
+                            </div>
+                            <div class="col-sm-3 p-3 text-center">
+                                <a href="files/Computer Organization.pdf" target="_blank">
+                                    <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                    <span class="course-content-desc">Computer Organization</span>
+                                    
+                                </a>
+                            </div>
+                            <div class="col-sm-3 p-3 text-center">
+                                <a href="files/ch-4 web page getting started with HTML 5.pdf" target="_blank">
+                                    <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                    <span class="course-content-desc">HTML-5</span>
+                                    
+                                </a>
+                            </div>
+                    </div>
+                  </div>
+
+                  <div id="sem2" class="container tab-pane fade"><br>
+                    <h3>Semester 2</h3>
+                    <div class="row">
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/DHTML unit-1.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">DHTML-1 </span>
+                                
+                            </a> 
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/Impress.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon"style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">Impress</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/Computer Organization.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">Computer Organization</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/ch-4 web page getting started with HTML 5.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">HTML-5</span>
+                                
+                            </a>
+                        </div>
+                </div>
+                  </div>
+                  <div id="sem3" class="container tab-pane fade"><br>
+                    <h3>Semester 3</h3>
+                    <div class="row">
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/DHTML unit-1.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">DHTML-1 </span>
+                                
+                            </a> 
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/UNIT 1 os.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon"style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">Operating system</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/unit 3 cpp.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">CPP</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/data structure.docx'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">Data structure</span>
+                            </a>
+                        </div>
+                </div>
+                  </div>
+
+
+                  <div id="sem4" class="container tab-pane fade"><br>
+                    <h3>Semester 4</h3>
+                    <div class="row">
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/Unit1_java.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">Java </span>
+                                
+                            </a> 
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/c#.docx' %}" target="_blank">
+                                <i class="fa fa-book course-icon"style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc"> C #</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/saqt.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">Saqt</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/dbms-2.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">DBMS-2</span>
+                            </a>
+                        </div>
+                </div>
+                  </div>
+
+                  <div id="sem5" class="container tab-pane fade"><br>
+                    <h3>Semester 5</h3>
+                    <div class="row">
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/Unit1_java.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">Computer networks </span>
+                                
+                            </a> 
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/c#.docx' %}" target="_blank">
+                                <i class="fa fa-book course-icon"style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc"> C #</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/saqt.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">Saqt</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/dbms-2.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">DBMS-2</span>
+                            </a>
+                        </div>
+                </div>
+                  </div>
+                  <div id="sem6" class="container tab-pane fade"><br>
+                    <h3>Semester 6</h3>
+                    <div class="row">
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/advancejava unit1.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">Advance Java</span>
+                                
+                            </a> 
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/st.pdf' %}" target="_blank">
+                                <i class="fa fa-book course-icon"style="font-size:30px;" aria-hidden="true"></i>
+                                <span class="course-content-desc">Software Testing</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/ai.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">Artificial intelligent</span>
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-3 p-3 text-center">
+                            <a href="{% static 'files/dm.pdf'%}" target="_blank">
+                                <i class="fa fa-book course-icon" style="font-size:30px;"aria-hidden="true"></i>
+                                <span class="course-content-desc">Data Mining</span>
+                            </a>
+                        </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>    
+        
+    <!-- footer -->
+    <footer class="w3l-footer-22 position-relative mt-5 pt-5">
+        <div class="footer-sub">
+            <div class="container">
+                <div class="text-txt">
+                    <div class="row sub-columns">
+                        <div class="col-lg-2 col-sm-6 sub-two-right">
+                            <h6>Quick links</h6>
+                            <ul>
+                                <li><a href="/"><span class="fa fa-angle-double-right mr-2"></span>Home</a>
+                                </li>
+                                <li><a href="about"><span class="fa fa-angle-double-right mr-2"></span>About</a>
+                                </li>
+                                <li><a href="courses"><span
+                                            class="fa fa-angle-double-right mr-2"></span>Courses</a></li>
+                                <li><a href="contact"><span
+                                            class="fa fa-angle-double-right mr-2"></span>Contact</a></li>
+                                <li><a href="gallery"><span
+                                            class="fa fa-angle-double-right mr-2"></span>Gallery</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 sub-one-left mt-lg-0 mt-sm-5 mt-4">
+                            <h6>Contact </h6>
+                            <div class="column2">
+                                <div class="href1"><span class="fa fa-envelope-o" aria-hidden="true"></span><a
+                                        href="mailto:info@example.com">yale@gmail.com</a>
+                                </div>
+                                <div class="href2"><span class="fa fa-phone" aria-hidden="true"></span><a
+                                        href="">+91-8986532140</a>
+                                </div>
+                                <div>
+                                    <p class="contact-para"><span class="fa fa-map-marker"
+                                            aria-hidden="true"></span>Ahmedabad,B2 subhas colony,380060</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 sub-one-left ab-right-cont pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+                            <h6>About </h6>
+                            <p>Yale college provides the course of bachlor's in computer applications. We are providing this course for students who wants to 
+                                build their career in IT field.</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright-footer text-center">
+            <div class="container">
+                <div class="columns">
+                    <p>@2024 Yale All rights reserved. Design by <a href="#"
+                        target="_blank">Vishva, Nyasa, Neha
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- //copyright -->
+    </footer>
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-level-up" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+    <script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+            thhis = thhis.find(".text-js");
+            var text = thhis.text().trim().split('');
+            var amntOfChars = text.length;
+            var newString = "";
+            thhis.text("|");
+            setTimeout(function () {
+                thhis.css("opacity", 1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for (var i = 0; i < amntOfChars; i++) {
+                    (function (i, char) {
+                        setTimeout(function () {
+                            newString += char;
+                            thhis.text(newString);
+                        }, i * typingSpeed);
+                    })(i + 1, text[i]);
+                }
+            }, 1500);
+        }
+
+        $(document).ready(function () {
+            // Now to start autoTyping just call the autoType function with the 
+            // class of outer div
+            // The second paramter is the speed between each letter is typed.   
+            autoType(".type-js", 200);
+        });
+    </script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>
